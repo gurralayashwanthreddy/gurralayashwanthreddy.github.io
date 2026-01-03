@@ -27,3 +27,9 @@
             text-decoration: none;
             margin: 5px;
         }
+        .box{
+            width: 300px;
+            margin: 10px;
+            padding: 5px;
+            border: 1px gray solid;
+        }

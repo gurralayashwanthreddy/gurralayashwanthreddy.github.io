@@ -1,0 +1,14 @@
+    .header{
+            background-color: skyblue;
+            color: black;
+        }
+        .footer{
+            background-color: pink;
+            color: black;
+        }
+        .container{
+            margin: 0px;
+        }
+        *{
+            margin: 0px;
+        }

@@ -1,35 +1,197 @@
-    .header{
-        display: flex;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-            background-color: skyblue;
-            color: black;
-        }
-        .footer{
-            background-color: pink;
-            color: black;
-        }
-        .container {
-            margin: 0px;
-        }
-        * {
-            margin: 0px;
-        }
-        .menu {
-            display: flex;
-        }
-        .menu li{
-            list-style: none;
-            margin: 5px;
-        }
-        .menu li a{
-            text-decoration: none;
-            margin: 5px;
-        }
-        .box{
-            width: 300px;
-            margin: 10px;
-            padding: 5px;
-            border: 1px gray solid;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #f4f6f8, #eef2ff);
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Sticky Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+    padding: 20px 40px;
+    color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #0f172a;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-top: 15px;
+}
+
+.hero img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+}
+
+/* Sections */
+.section, .projects {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.section h2,
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0f172a;
+    border-left: 6px solid #38bdf8;
+    padding-left: 15px;
+}
+
+/* Cards */
+#services,
+.projects > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 300px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.box h3 {
+    color: #020617;
+}
+
+/* Skills */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Contact */
+#contact a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 250px;
+        height: 250px;
+    }
+}
